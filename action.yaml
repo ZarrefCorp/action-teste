@@ -4,6 +4,6 @@ runs:
   using: 'composite'
   steps:
     - name: build
-      run: echo {{ secrets.TESTE }}
+      run: echo ${{ secrets.TESTE }}
       shell: bash
       
