@@ -1,11 +1,9 @@
-name: deploy
-
-on: workflow_call
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: teste
-        run: echo "test"
-      - run: echo {{ secrets.TESTE }}
+name: Build Project
+description: "This is a action test"
+runs:
+  using: 'composite'
+  steps:
+    - name: build
+      run: echo {{ secrets.TESTE }}
+      shell: bash
+      
